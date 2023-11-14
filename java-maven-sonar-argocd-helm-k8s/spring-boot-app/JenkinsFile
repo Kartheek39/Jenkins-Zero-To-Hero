@@ -72,9 +72,10 @@ pipeline {
   agent any
 
   stages{
-    stage("first stage") {
+    stage("code checkout") {
       steps {
-          echo "first stage executed"
+          //echo "first stage executed"
+          git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
       }
     }
     stage("second stage"){
