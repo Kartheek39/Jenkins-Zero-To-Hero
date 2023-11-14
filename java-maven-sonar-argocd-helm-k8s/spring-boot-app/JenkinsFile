@@ -80,7 +80,9 @@ pipeline {
     }
     stage("second stage"){
       steps{
-        echo "second stage executed"
+        //echo "second stage executed"
+        sh 'ls -ltr'
+        sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package'
       }
     }
   }
