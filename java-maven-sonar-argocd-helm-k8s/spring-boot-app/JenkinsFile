@@ -70,9 +70,6 @@
 
 pipeline {
   agent any
-  tools{
-    maven 'Maven 3.9.4'
-  }
 
   stages{
     stage("code checkout") {
@@ -87,7 +84,7 @@ pipeline {
         sh 'ls -ltr'
         //sh 'export MAVEN_HOME=/opt/maven'
         //sh 'export PATH=$PATH:$MAVEN_HOME/bin'
-        sh 'mvn -version'
+        //sh 'mvn -version'
         sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package'
       }
     }
